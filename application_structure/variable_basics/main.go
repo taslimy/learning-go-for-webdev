@@ -18,4 +18,38 @@ func main() {
 
 	myAge := "old xd"
 	fmt.Println(myAge)
+
+	// Declaring multiple variables.
+	car, cost := "BMW", 60000
+	fmt.Println(car, cost)
+	car, year := "Toyota", 2018
+	_ = year
+
+	opened := false
+	opened, file := true, "a.txt"
+
+	_, _ = opened, file
+
+	// Clearer way to write multiple variables - better readability
+	var (
+		salary    float64
+		firstName string
+		gender    bool
+	)
+
+	fmt.Println(salary, firstName, gender)
+
+	// multiple same type
+	var a, b, c int
+	fmt.Println(a, b, c)
+
+	// multiple assignment
+	var d, e int
+	d, e = 5, 8
+
+	d, e = e, d // Swapping variables
+	println(d, e)
+
+	sum := 6 + 2.3
+	fmt.Println(sum)
 }
