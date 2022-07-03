@@ -53,7 +53,7 @@ var max_value int = 100 // NOT OK
 
 - use fewer letters in smaller scopes and complete word in larger scopes
 
-```
+```h
 // DO NOT USE UNDERSCORES
 var packetsRecieved int // NOT OK, name to long.
 var n int = 500 // OK ->
@@ -68,8 +68,6 @@ max_values := // NOT Recommended.
 
 writeToDB := true // ok, idiomatic.
 writeToDb := false // not ok.
-
-
 ```
 
 ## Variables
