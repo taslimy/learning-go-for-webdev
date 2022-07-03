@@ -23,6 +23,55 @@ Gave up find a job doing html,css,js,node,react. So learning something new and m
 - example: `gofmt -w filename.go` formats according to Go Style.
 - sets one standard to follow which I like.
 
+## Comments
+
+### How to write comments
+
+```
+// Single comment
+
+/*
+
+Block comment like how you do it in CSS.
+
+*/
+```
+
+## Naming Conventions - Important for readability, maintainability
+
+- names start with a **letter** or an underscore (\_).
+- _case matters:_ quickSort and QuickSort are differnt variables.
+- Go [keyword](https://go101.org/article/keywords-and-identifiers.html) Go has only 25 keywords that cannot be used as a name for a variable.
+- Sitck to camelCasing! just like in JS.
+- Go does not provide automatic setup for Gettings and Setters.
+- best pratice is to use the abbreviated letters of words:
+
+```
+var mv int = 100//mv -> max value
+var max_value int = 100 // NOT OK
+```
+
+- use fewer letters in smaller scopes and complete word in larger scopes
+
+```
+// DO NOT USE UNDERSCORES
+var packetsRecieved int // NOT OK, name to long.
+var n int = 500 // OK ->
+var taskDone bool // OK in larger scopes.
+
+var Max = 100 // Can be used globally by other packages.
+var max = 100 // local to your current package.
+
+// camelCasing = Recommended.
+maxValues := 100 // Recommended.
+max_values := // NOT Recommended.
+
+writeToDB := true // ok, idiomatic.
+writeToDb := false // not ok.
+
+
+```
+
 ## Variables
 
 - A **variable** is a name for a memory location where a value of a specific type is stored.
@@ -97,3 +146,12 @@ func main() {
 	fmt.Println(sum)
 }
 ```
+
+## Zero Values (default values I guess)
+
+### Go Zero values:
+
+- numeric types: 0
+- bool type: false
+- string type: "" (empty string)
+- poiner type: nil
